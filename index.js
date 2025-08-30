@@ -90,7 +90,7 @@ async function connectToWA() {
 
       const up = `🌺𝙇αкι 𝘽σƚ🍀 connected ✅\n\nPREFIX: ${prefix}`;
       await laki.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
-        image: { url: `https://github.com/lakshanrl2711/LAKI-BOT/blob/main/image/WhatsApp%20Image%202025-08-27%20at%2012.06.55_70955ff9.jpg?raw=true` },
+        image: { url: `https://github.com/lakshanrl2711/LAKI-BOT/blob/main/image/WhatsApp%20Image%202025-08-31%20at%2003.00.40_d9f7105e.jpg?raw=true` },
         caption: up
       });
 
