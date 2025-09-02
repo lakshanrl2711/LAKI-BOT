@@ -27,13 +27,13 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const prefix = '.';
-const ownerNumber = ['94760341817'];
+const ownerNumber = ['94779439309'];
 const credsPath = path.join(__dirname, '/auth_info_baileys/creds.json');
 
 async function ensureSessionFile() {
   if (!fs.existsSync(credsPath)) {
     if (!config.SESSION_ID) {
-      console.error('❌ SESSION_ID env variable is missing. Cannot restore session.');
+      console.error('❌ 𝚂𝙴𝚂𝚂𝙸𝙾𝙽_𝙸𝙳 𝚎𝚗𝚟 𝚟𝚊𝚛𝚒𝚊𝚋𝚕𝚎 𝚒𝚜 𝚖𝚒𝚜𝚜𝚒𝚗𝚐. 𝙲𝚊𝚗𝚗𝚘𝚝 𝚛𝚎𝚜𝚝𝚘𝚛𝚎 𝚜𝚎𝚜𝚜𝚝𝚒𝚘𝚗...🚫');
       process.exit(1);
     }
 
@@ -44,14 +44,13 @@ async function ensureSessionFile() {
 
     filer.download((err, data) => {
       if (err) {
-        console.error("❌ Failed to download session file from MEGA:", err);
+        console.error("✖𝙵𝚊𝚒𝚕𝚎𝚍 𝚝𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚜𝚎𝚜𝚜𝚝𝚒𝚘𝚗 🆔 𝚏𝚒𝚕𝚎 𝚏𝚛𝚘𝚖 𝚖𝚎𝚐𝚊...😕:", err);
         process.exit(1);
       }
 
       fs.mkdirSync(path.join(__dirname, '/auth_info_baileys/'), { recursive: true });
       fs.writeFileSync(credsPath, data);
-      console.log("✅ Session downloaded and saved. Restarting 𝙇αкι 𝘽σƚ
-...");
+      console.log("✅➫ 𝚂𝚎𝚜𝚜𝚝𝚒𝚘𝚗 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 𝚊𝚗𝚍 𝚜𝚊𝚟𝚎𝚍. 𝚁𝚎𝚜𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝙻𝙰𝙺𝙸 𝙱𝙾𝚃🍂💯");
       setTimeout(() => {
         connectToWA();
       }, 2000);
@@ -64,7 +63,7 @@ async function ensureSessionFile() {
 }
 
 async function connectToWA() {
-  console.log("Connecting 🌺𝙇αкι 𝘽σƚ🍀 🧬...");
+  console.log("☑𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚒𝚗𝚐 𝙻𝙰𝙺𝙸 𝙱𝙾𝚃🍂🔵");
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, '/auth_info_baileys/'));
   const { version } = await fetchLatestBaileysVersion();
 
@@ -86,11 +85,11 @@ async function connectToWA() {
         connectToWA();
       }
     } else if (connection === 'open') {
-      console.log('✅ 🌺𝙇αкι 𝘽σƚ🍀 connected to WhatsApp');
+      console.log('☑ 𝙻𝙰𝙺𝙸 𝙱𝙾𝚃 𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚒𝚗𝚐 𝚃𝚘 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙❤🍂');
 
-      const up = `🌺𝙇αкι 𝘽σƚ🍀 connected ✅\n\nPREFIX: ${prefix}`;
+      const up = `☑ 𝙻𝙰𝙺𝙸 𝙱𝙾𝚃 𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚎𝚍🤟🏻😉\n\nPREFIX: ${prefix}`;
       await laki.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
-        image: { url: `https://github.com/lakshanrl2711/LAKI-BOT/blob/main/image/WhatsApp%20Image%202025-08-31%20at%2003.00.40_d9f7105e.jpg?raw=true` },
+        image: { url: `https://github.com/lakshanrl2711/LAKI-BOT/blob/main/img/WhatsApp%20Image%202025-08-31%20at%2003.00.40_d9f7105e.jpg?raw=true` },
         caption: up
       });
 
@@ -180,7 +179,7 @@ async function connectToWA() {
 ensureSessionFile();
 
 app.get("/", (req, res) => {
-  res.send("Hey, 🌺𝙇αкι 𝘽σƚ🍀 started✅");
+  res.send("🤗𝙷𝚎𝚢, 𝙻𝙰𝙺𝙸 𝙱𝙾𝚃 𝚂𝚃𝙰𝚁𝚃𝙴𝙳❤🍂");
 });
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
