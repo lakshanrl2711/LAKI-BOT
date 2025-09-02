@@ -4,9 +4,10 @@
   "description": "A Powerful Whatsapp Bot",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name laki-bot",
+    "start": "pm2 start index.js --name laki-bot --attach",
     "stop": "pm2 stop laki-bot",
-    "restart": "pm2 restart laki-bot"
+    "restart": "pm2 restart laki-bot",
+    "dev": "node index.js"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.18",
