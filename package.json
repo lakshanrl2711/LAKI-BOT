@@ -1,12 +1,12 @@
 {
-  "name": "𝙇αкι 𝘽σƚ",
+  "name": "laki-bot",
   "version": "1.0.0",
-  "description": "A Powerfull Whatsapp 𝙇αкι 𝘽σƚ",
+  "description": "A Powerful Whatsapp Bot",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name 𝙇αкι 𝘽σƚ",
-    "stop": "pm2 stop 𝙇αкι 𝘽σƚ",
-    "restart": "pm2 restart 𝙇αкι 𝘽σƚ"
+    "start": "pm2 start index.js --deep-monitoring --attach --name laki-bot",
+    "stop": "pm2 stop laki-bot",
+    "restart": "pm2 restart laki-bot"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.18",
@@ -31,7 +31,6 @@
     "qrcode-terminal": "^0.12.0",
     "tmp": "^0.2.5",
     "util": "^0.12.5",
-    "vm": "^0.1.0
-    "
+    "vm": "^0.1.0"
   }
 }
